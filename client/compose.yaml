@@ -10,7 +10,7 @@ services:
       - 7080:6080
     volumes:
       - ./hy-client.yaml:/etc/hysteria.yaml
-    command: ["-c", "/etc/hysteria.yaml", "-l", "debug"]
+    command: ["client", "-c", "/etc/hysteria.yaml", "-l", "debug"]
     logging:
       driver: json-file
       options:

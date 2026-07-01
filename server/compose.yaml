@@ -9,7 +9,7 @@ services:
     volumes:
       - ./hy-server.yaml:/etc/hysteria.yaml
       - ./certs:/etc/hysteria/certs
-    command: ["-c", "/etc/hysteria.yaml", "-l", "debug"]
+    command: ["server", "-c", "/etc/hysteria.yaml", "-l", "debug"]
     logging:
       driver: json-file
       options:
