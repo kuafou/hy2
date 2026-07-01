@@ -1,0 +1,16 @@
+server: pro.mlsys.fun:13443
+
+auth: EwqQscAKhpgLZwXHyu
+
+bandwidth:
+  up: 100 mbps
+  down: 100 mbps
+
+socks5:
+  listen: 0.0.0.0:1080
+
+http:
+  listen: 0.0.0.0:6080
+
+tls:
+  insecure: true

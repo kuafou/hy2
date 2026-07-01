@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  hysteria:
+    image: tobyxdd/hysteria:v2.9.3
+    container_name: hysteria2-server
+    restart: always
+    ports:
+      - "13443:13443/udp"
+    volumes:
+      - ./hy-server.yaml:/etc/hysteria.yaml
+      - ./certs:/etc/hysteria/certs
+    command: ["-c", "/etc/hysteria.yaml", "-l", "debug"]
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"

@@ -1,0 +1,19 @@
+listen: :13443
+
+tls:
+  cert: /etc/hysteria/certs/server.crt
+  key: /etc/hysteria/certs/server.key
+
+auth:
+  type: password
+  password: EwqQscAKhpgLZwXHyu
+
+bandwidth:
+  up: 100 mbps
+  down: 100 mbps
+
+masquerade:
+  type: proxy
+  proxy:
+    url: https://bing.com
+    rewriteHost: true

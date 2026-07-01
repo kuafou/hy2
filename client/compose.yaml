@@ -1,0 +1,19 @@
+version: "3.9"
+services:
+  hysteria:
+    image: artifactory.prod.shu.team/docker/tobyxdd/hysteria:v2.9.3
+    container_name: hysteria2
+    restart: always
+    #network_mode: host
+    ports:
+      - 1088:1080
+      - 7080:6080
+    volumes:
+      - ./hy-client.yaml:/etc/hysteria.yaml
+    command: ["-c", "/etc/hysteria.yaml", "-l", "debug"]
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
